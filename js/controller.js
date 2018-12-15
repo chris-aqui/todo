@@ -24,8 +24,9 @@
     that.view.bind("toggleAll", function(status) {
       that.toggleAll(status.completed);
     });
-    that.view.bind("itemRemove", function(item) {
-      that.removeItem(item.id);
+
+    that.view.bind("dtlToDo", function(item) {
+      that.itemRemove(item.id);
     });
   }
 
@@ -185,12 +186,13 @@
   };
 
   // remove an item
-  Controller.prototype.removeItem = function(id) {
+  Controller.prototype.itemRemove = function(id) {
     var that = this;
     that.model.delete(id, function() {
       that.view.render("elementComplete", {
         id: id
       });
+      that._filter(true);
     });
   };
   // Export to window

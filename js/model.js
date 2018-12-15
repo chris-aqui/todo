@@ -95,8 +95,8 @@
     });
   };
 
-  Model.prototype.delete = function(id) {
-    this.storage.save(data[id]);
+  Model.prototype.delete = function(id, callback) {
+    this.storage.destroy(id, callback);
   };
 
   // Export to window

@@ -43,7 +43,7 @@
       var template = this.defaultTemplate;
       var completed = "";
       var checked = "";
-      var dtl = false;
+      // var dtl = false;
 
       if (data[i].completed) {
         completed = "completed";
