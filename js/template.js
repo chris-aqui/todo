@@ -12,7 +12,7 @@
       '<li data-id="{{id}}" class="{{completed}}">' +
       '<div class="view">' +
       '<input class="toggle" type="checkbox" {{checked}}>' +
-      '<input class="delt" type="button" {{dtl}}>' +
+      '<div class="destroy"></div>' +
       "<label>{{title}}</label>" +
       "</div>" +
       "</li>";

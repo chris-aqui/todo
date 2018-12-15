@@ -184,7 +184,7 @@
     this.view.render("setFilter", currentPage);
   };
 
-  //
+  // remove an item
   Controller.prototype.removeItem = function(id) {
     var that = this;
     that.model.delete(id, function() {
